@@ -219,8 +219,53 @@ Exemplo:
  1000 - Para análise do programa
 ```
 
-    * Programação em C
+   * Programação em C
+   ```c 
+   if ( dado & 1000 )
+      printf("Dia!");
+   else
+      printf("Noite!");
+```
+Convenções podem mudar com o tempo e entre variações do Unix, portanto é aconselhável usar, como máscara,
+macros de nomes significativos em vez de padrões de _bits_.
     
+   ```c 
+#define TURNO 1000    // no .h
+
+   if ( dado & TURNO )
+      printf("Dia!");
+   else
+      printf("Noite!");
+```
+
+* Em resumo: em termos de programação, uma decisão com base em um dado de 1 _bit_ pode ser tomada em uma sentença
+condicional cuja condição é um "e (conjunção) bit a bit" entre uma palavras de dados e uma máscara. Se o referido
+_bit_ for 0, a condição tem valor falso; se for 1, verdadeiro.
+
+### Identificando unicamente um arquivo: o par _device_ + _inode_
+
+* O _inode_ é único num sistema de arquivos de um dispositivo (por exemplo, partição).
+
+* Considerando todos os dispositivos montados na "árvore" de diretórios, então o par _device_ + _inode_
+identifica unicanente um arquivo.
+
+* _Device_ é o campo `st_dev`` e _inode_ é o campo `st_ino`.
+
+### Propriedade (posse)
+
+* Todo arquivo possui um proprietário ou dono (_owner_) e grupos (grupos-proprietários ou grupos-donos).
+    * ❓ Para pesquisar: pode ser mais de um grupo?
+    * :question: Para pesquisar: é obrigatório que o grupo do proprietário seja aplicado?
+* O proprietário e os grupos são definidos pelos números "_User ID_" e "_Group ID_"
+    * Números definidos nos arquivos `/etc/passwd` e `/etc/groups`
+        * Apesar do nome remeter a _password_, o arquivo `/etc/passwd` não contém senhas, mas as principais opções
+        do usuário (nome completo, programa _shell_, diretório de trabalho, etc.), além do número
+        * Atualmente, as senhas ficam encriptadas em `/etc/shadow`
+    * Todos os dados de usuário e grupo podem ser acessadas através de funções em C (`man 3`)
+        * `getpwnam` e `getgrnam` aceitam o nome de usuário ou grupo como parâmetro
+        * `getpwuid` e `getgrgid` aceitam o número
+* Na estrutura de dados `stat`, os números estão em `st_uid` e `st_gid`
+* Para um programa em execução (processo :runner:), existem as chamadas de sistema :bowtie:
 
 ## Empurrando
 
