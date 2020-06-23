@@ -46,9 +46,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="217.07128"
-     inkscape:cx="282.01898"
-     inkscape:zoom="1.2853745"
+     inkscape:cy="121.61836"
+     inkscape:cx="284.1172"
+     inkscape:zoom="2.3982545"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -86,7 +86,11 @@
        xml:space="preserve"><tspan
          x="11.527344"
          y="18.299996"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">1001110001010</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold'">100111000101</tspan></tspan><tspan
+         style="visibility:hidden"
+         x="11.527344"
+         y="34.561715"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold'">0</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text833-2"
@@ -94,7 +98,11 @@
        transform="translate(24.948911,22.356628)"><tspan
          x="11.527344"
          y="18.299996"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">1001110001010</tspan></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold'">100111000101</tspan></tspan><tspan
+         style="visibility:hidden"
+         x="11.527344"
+         y="34.561715"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New'">0</tspan></tspan></text>
     <rect
        y="30.258694"
        x="35.198887"
@@ -104,7 +112,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        y="30.258694"
-       x="35.198887"
+       x="35.728054"
        height="15.41293"
        width="7.1348825"
        id="rect933"
@@ -114,25 +122,25 @@
        id="rect933-5"
        width="5.7508941"
        height="15.412929"
-       x="42.38905"
+       x="43.447384"
        y="30.312475" />
     <rect
        y="30.068333"
-       x="48.128551"
+       x="49.628185"
        height="15.412928"
        width="5.7508941"
        id="rect933-5-8"
        style="fill:#3128b8;fill-opacity:0.298387;stroke:none;stroke-width:0.264583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        y="30.238274"
-       x="53.869419"
+       x="55.765438"
        height="15.412928"
        width="5.7508941"
        id="rect933-5-0"
        style="fill:#28b85c;fill-opacity:0.298387;stroke:none;stroke-width:0.264583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        y="30.149706"
-       x="77.273758"
+       x="74.936455"
        height="15.412928"
        width="5.7508941"
        id="rect933-5-9"
@@ -142,14 +150,14 @@
        id="rect933-5-9-3"
        width="11.693904"
        height="15.412927"
-       x="83.013474"
+       x="81.425972"
        y="30.271877" />
     <rect
        style="fill:#94b828;fill-opacity:0.298387;stroke:none;stroke-width:0.264583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect933-5-9-6"
        width="18.939491"
        height="15.412927"
-       x="94.707367"
+       x="93.649033"
        y="30.271877" />
   </g>
 </svg>
