@@ -265,9 +265,70 @@ identifica unicanente um arquivo.
         * `getpwnam` e `getgrnam` aceitam o nome de usuário ou grupo como parâmetro
         * `getpwuid` e `getgrgid` aceitam o número
 * Na estrutura de dados `stat`, os números estão em `st_uid` e `st_gid`
-* Para um programa em execução (processo :runner:), existem as chamadas de sistema :bowtie:
+* Para um programa em execução (processo :runner:), existem as chamadas de sistema :bowtie: :
+    * `getlogin` que retorna o nome do proprietário
+    * `getgroups` que retorna um ponteiro para um _array_ de números de grupo
+* Para mudar o proprietário e o grupo de um arquivo, existe a chamada de sistema :bowtie: `chown`,
+que recebe o nome do arquivo e os números de usuário e grupo. Há a variante `fchown` que recebe
+o descritor de arquivo :briefcase: em vez do nome.
 
-## Empurrando
+## Direitos de acesso
 
-mkdir
-rmdir  
+* Mais conhecidos pelo formato `rwxrwxrwx` exibido por `ls -l`
+    * O grupo `rwx` mais alto refere-se ao proprietário (`u` de _user_)
+    * O grupo intermediário refere-se aos grupos (`g`)
+    * O grupo mais baixo refere-se aos outros (`o`)
+    * `r` significa:
+        * para arquivos ordinários, a autorização para abrir o arquivo para leitura
+        * para diretórios, a autorização para listar o conteúdo (não impede, contudo, de ler arquivos dentro dele, 
+        desde que se conheça seus nomes)
+    * `w` significa autorização para altera o conteúdo
+    * `x` significa:
+        * para arquivos ordinários, a autorização para executá-lo (precisa ser programa compilado ou _script_)
+        * para diretórios, a autorização para usá-lo como diretório atual (`cd` para ele)
+* Bits especiais
+    * Só fazem sentido quando `x` também está ativo 
+        * Por isso, eles aparecem nas posições de `x` na saída de `ls -l`
+        * Se `x` não foi setado, eles aparecem em maiúsculas para indicar equívoco
+    * `t` (_Sticky bit_, grudento)
+        * Quando ativo em um diretório, impede que outros usuário apaguem um arquivo (usado em `/tmp`)
+        * Em `chown`, aparece como décimo bit ( `chown 1644 arquivo` ou `chown +t arquivo` )
+    * `s` 
+        * Em diretório, faz com que subdiretórios herdem `uid` e `gid` dele (diretório) em vez dos do proprietário
+        * Em um programa em execução :runner: autoriza a troca de proprietário e grupos através das chamadas
+        de sistema :bowtie: `setuid` e `getuid`
+        * chamadas de sistema :bowtie: para recuperar o proprietário e o grupo de um programa em execução :runner: :
+        `geteuid` e `getegid` (mas para saber os valores originais do processo antes de eventual mudança: 
+        `getuid` e `getgid` / `e` em `geteuid` é de _efetivo_)
+* Direitos de acesso automáticos para novos arquivos
+    * É possível configurar os direitos de acesso _default_ para arquivos novos
+    * Para isso, existe uma máscara de criação de arquivos (não confundir com outras máscaras mencionadas anterioremente)
+    * Chamada de sistema :bowtie: `umask`
+        * Parâmetro: padrão de _bits_ `sstrwxrwxrwx`, invertendo: 1 na máscara => 0 no arquivo e vice-versa
+        * Retorno: padrão de _bits_ que estava valendo antes desta execução da chamada
+            * Fica claro que, para apenas ler, é preciso executar duas vezes
+* Alterando direitos de acesso
+    * Chamadas de sistema :bowtie: : `chmod` e `fchmod` 
+    * Para conferir: chamada de sistema :bowtie: `access`
+
+### Observação final
+Existe uma diferença entre:
+* O que um processo :runner: pode efetivamente fazer (característica dinâmica do sistema de arquivos)
+* O que o sistema de arquivos especifica (característica estática)
+
+## Completando operações em diretórios
+
+Agora que conhecemos o conceito de permissão, podemos completar as chamadas de sistema :bowtie: em diretórios:
+
+* `mkdir`
+    * Parâmetros: nome do diretório e permissões
+* `rmdir`
+    * Parâmetro: nome 
+    * O diretório deve estar vazio
+    
+## Fora do assunto: o _shell_ e o comando `$?`
+
+* Execute qualquer comando no _shell_
+* Em seguida, execute `echo $?`
+    * Dá acesso ao resultado retornado pelo comando anterior
+    * Isto é, o valor que é retornado pela função _main_ (lembra do `int main()` ?)
