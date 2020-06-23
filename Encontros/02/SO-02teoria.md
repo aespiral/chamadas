@@ -6,6 +6,10 @@ Xavier Leroy e Didier Rémy, 2014
 
 Licenciado sob a Creative Commons
 
+Todos os manuais (`man 2 stat`, `man 3 opendir`, etc.) originários do macOS Catalina.
+    * Há diferenças em relação ao Linux, e mesmo entre versões do Linux
+    * Confira especifidades do seu sistema
+
 ## Estratégia de aprendizagem
 
 Tentar associar:
@@ -71,7 +75,7 @@ SYNOPSIS
    * `rewinddir`
    * `closedir`
 
-Obs.: Kotlin Native, disponível na biblioteca `platform.posix`
+Obs.: Embora não seja chamada de sistema, em Kotlin Native, também está disponível na biblioteca `platform.posix`
 
 ---
 ```
@@ -88,7 +92,6 @@ Obs.: Kotlin Native, disponível na biblioteca `platform.posix`
            (void)closedir(dirp);
            return (NOT_FOUND);
 ```   
-* Extraído de `man 3 opendir` no macOS
 * É um programa exemplo 
    * Funcionalidade: dado um nome de arquivo, busca no diretório
 * `readdir` é um iterador
@@ -146,9 +149,6 @@ Tudo no mesmo `man 2 stat`
 ``` 
 $ man 2 stat
 ```
-* Discussão seguinte aplica-se ao macOS Catalina
-    * Há variações entre fabricantes
-    * Confira especifidades do seu sistema
 
 ``` 
      struct stat { /* when _DARWIN_FEATURE_64_BIT_INODE is defined */
@@ -176,15 +176,21 @@ Diversos metadados estão nos _inodes_.
 
 ### Sobre tipos específicos dos _header files_ das chamadas de sistema
 
-* Em geral, podem ser redefinições de tipos numéricos sem sinal
+* Exemplos
+    * `dev_t`
+    * `mode_t`
+    * 'inode_t'
+* Em geral, podem ser sinônimos (`typedef`s) de tipos numéricos sem sinal
     * Compatíveis com `long long unsigned`
     * `%llu` no `printf`
 
 ### Sobre mascaramento de _bits_ 
 
-Quando a informação requer poucos bits, é comum agregar várias informações em uma palavra.
+Quando a informação requer poucos _bits_, é comum agregar várias informações em uma palavra.
 
-Cada _campo de bits_ da palavra representa uma informação. A palavra funciona como um "registro feito de bits".
+Cada _campo de bits_ da palavra representa uma informação. A palavra funciona como um "registro feito de _bits_".
+
+![Campos de bits](imagens/campos-de-bits.svg)
 
 Para ler um campo, é preciso "mascarar" os demais, realizando um "e bit a bit" (_bitwise and_) entre a palavra e
 a máscara. A máscara é composta de 0s nas respectivas posições dos campos ignorados, e 1s no campo de interesse.
