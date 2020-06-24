@@ -85,24 +85,29 @@ Obs.: Embora não seja chamada de sistema, em Kotlin Native, também está dispo
            dirp = opendir(".");
            if (dirp == NULL)
                    return (ERROR);
-           len = strlen(name);
-           while ((dp = readdir(dirp)) != NULL) {
-                   if (dp->d_namlen == len && strcmp(dp->d_name, name) == 0) {
-                           (void)closedir(dirp);
-                           return (FOUND);
-                   }
+           int counter = 0;
+           while (readdir(dirp) != NULL) {
+                   counter++;
            }
            (void)closedir(dirp);
-           return (NOT_FOUND);
+           return counter;
 ```   
 * É um programa exemplo 
-   * Funcionalidade: dado um nome de arquivo, busca no diretório
+   * Funcionalidade: contar as entradas no diretório atual
 * `readdir` é um iterador
    * A cada execução ele retorna uma entrada diferente
    * Retorna `NULL` quando termina
    
 `readdir` (iterador) mantém internamente o estado do percurso
 
+### Exercício
+
+* Fazer um programa que imprime os nomes dos arquivos.
+    * Para isso, use o retorno de `readdir` que desprezamos anteriormente
+    * A função `readdir` retorna um ponteiro para uma `struct dirent` (entrada de diretório) 
+    * Um dos campos da _struct_ é o nome da entrada
+    * Tudo isso está em `man 3 readdir`
+    
 ## Descritores de arquivos
 
 * Duas formas de acessar arquivos
