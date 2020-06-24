@@ -315,7 +315,7 @@ o descritor de arquivo :briefcase: em vez do nome.
         * Se `x` não foi setado, eles aparecem em maiúsculas para indicar equívoco
     * `t` (_Sticky bit_, grudento)
         * Quando ativo em um diretório, impede que outros usuário apaguem um arquivo (usado em `/tmp`)
-        * Em `chown`, aparece como décimo bit ( `chown 1644 arquivo` ou `chown +t arquivo` )
+        * Em `chmod`, aparece como décimo bit ( `chmod 1644 arquivo` ou `chmod +t arquivo` )
     * `s` 
         * Em diretório, faz com que subdiretórios herdem `uid` e `gid` dele (diretório) em vez dos do proprietário
         * Em um programa em execução :runner: autoriza a troca de proprietário e grupos através das chamadas
