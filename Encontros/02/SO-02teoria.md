@@ -126,6 +126,21 @@ Obs.: Embora não seja chamada de sistema, em Kotlin Native, também está dispo
    * `stderr`: número 2, _default_ é a tela
 
 ## Redirecionamentos
+
+* Entrada (`stdin`)
+```shell script
+% cmd < f
+```
+* Saída (`stdout`)
+```shell script
+% cmd > f
+```
+* Erro (`stderr`)
+```shell script
+% cmd 2> f
+```
+
+---
 * `redireciona.c`
 ```c 
 #include <stdio.h>
