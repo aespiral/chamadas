@@ -7,8 +7,8 @@ Xavier Leroy e Didier Rémy, 2014
 Licenciado sob a Creative Commons
 
 Todos os manuais (`man 2 stat`, `man 3 opendir`, etc.) originários do macOS Catalina.
-    * Há diferenças em relação ao Linux, e mesmo entre versões do Linux
-    * Confira especifidades do seu sistema
+* Há diferenças em relação ao Linux, e mesmo entre versões do Linux
+* Confira especifidades do seu sistema
 
 ## Estratégia de aprendizagem
 
@@ -44,6 +44,9 @@ Análise:
 
 Método:
 * Fazendo requisições ao _kernel_ (chamadas de sistema se possível)
+
+![Processos do Kernel](imagens/processos-do-kernel.svg)
+
 
 ## Opendir (e readdir, closedir, rewinddir)
 ```
@@ -131,7 +134,7 @@ int main() {
 $ ./redireciona 
 $ ./redireciona > saida.txt
 $ ./redireciona 2> erro.txt
-$ ./redirecona > saída.txt 2> erro.txt
+$ ./redireciona > saída.txt 2> erro.txt
 ```
 
 ## Metadados
@@ -179,7 +182,7 @@ Diversos metadados estão nos _inodes_.
 * Exemplos
     * `dev_t`
     * `mode_t`
-    * 'inode_t'
+    * `inode_t`
 * Em geral, podem ser sinônimos (`typedef`s) de tipos numéricos sem sinal
     * Compatíveis com `long long unsigned`
     * `%llu` no `printf`
@@ -249,7 +252,7 @@ _bit_ for 0, a condição tem valor falso; se for 1, verdadeiro.
 * Considerando todos os dispositivos montados na "árvore" de diretórios, então o par _device_ + _inode_
 identifica unicanente um arquivo.
 
-* _Device_ é o campo `st_dev`` e _inode_ é o campo `st_ino`.
+* _Device_ é o campo `st_dev` e _inode_ é o campo `st_ino`.
 
 ### Propriedade (posse)
 
@@ -300,6 +303,26 @@ o descritor de arquivo :briefcase: em vez do nome.
         * chamadas de sistema :bowtie: para recuperar o proprietário e o grupo de um programa em execução :runner: :
         `geteuid` e `getegid` (mas para saber os valores originais do processo antes de eventual mudança: 
         `getuid` e `getgid` / `e` em `geteuid` é de _efetivo_)
+* Macros para acessar os _bits_
+    * `man 2 stat` (rolar até encontrar)
+```
+     The status information word st_mode has the following bits:
+     ...
+     #define S_ISUID 0004000  /* set user id on execution */
+     #define S_ISGID 0002000  /* set group id on execution */
+     #define S_ISVTX 0001000  /* save swapped text even after use */
+     #define S_IRUSR 0000400  /* read permission, owner */
+     #define S_IWUSR 0000200  /* write permission, owner */
+     #define S_IXUSR 0000100  /* execute/search permission, owner */
+
+```
+* Retomando:
+    * A palavra `st_mode` contém o status dos direitos de acesso
+    * As constantes definidas parecem estar na base octal, o que significa
+    que cada caracter representa 3 bits. 
+    * Da direita para a esquerda :arrow_left:, o primeiro caracter seria o grupo dos "outros"
+    * O trecho acima já mostra o terceiro caracter, com o grupo do proprietário (_owner_ ou _user_)
+    * O trecho acima começa com o quarto caracter, dos _bits_ especiais
 * Direitos de acesso automáticos para novos arquivos
     * É possível configurar os direitos de acesso _default_ para arquivos novos
     * Para isso, existe uma máscara de criação de arquivos (não confundir com outras máscaras mencionadas anterioremente)
@@ -310,11 +333,40 @@ o descritor de arquivo :briefcase: em vez do nome.
 * Alterando direitos de acesso
     * Chamadas de sistema :bowtie: : `chmod` e `fchmod` 
     * Para conferir: chamada de sistema :bowtie: `access`
+* Observação final desta seção no livro: os autores reforçam que existe uma diferença entre:
+    * O que um processo :runner: pode efetivamente fazer (característica dinâmica do sistema de arquivos)
+    * O que o sistema de arquivos especifica (característica estática)
 
-### Observação final
-Existe uma diferença entre:
-* O que um processo :runner: pode efetivamente fazer (característica dinâmica do sistema de arquivos)
-* O que o sistema de arquivos especifica (característica estática)
+## Verificando o tipo do arquivo: lendo campos de _bits_ largos
+
+* Já vimos como receber um pacote de informações em uma palavra constituída de vários campos de _bits_  e 
+decidir com base no valor de um campo de largura 1 _bit_ 
+* Quando o campo é mais largo do que 1 _bit_, essa técnica não é suficiente
+* Precisamos considerar dois itens:
+    * A máscara correspondente ao campo (todos os _bits_ valendo 1 no campo, e 0 fora dele)
+    * O valor que se quer encontrar no campo
+* O trecho abaixo ilustra isso. Trata-se do `man 2 stat` no quesito `st_mode`
+
+```
+     #define S_IFMT 0170000           /* type of file */
+     #define        S_IFIFO  0010000  /* named pipe (fifo) */
+     #define        S_IFCHR  0020000  /* character special */
+     #define        S_IFDIR  0040000  /* directory */
+     #define        S_IFBLK  0060000  /* block special */
+     #define        S_IFREG  0100000  /* regular */
+     #define        S_IFLNK  0120000  /* symbolic link */
+     #define        S_IFSOCK 0140000  /* socket */
+     #define        S_IFWHT  0160000  /* whiteout */
+```
+
+* `S_IFMT` é a máscara (aqui em base octal) : `1 111 000 000 000 000 `
+* Por exemplo, para conferir se o arquivo é um _link_ simbólico, o valor resultante esperado após aplicação da máscara 
+é `S_IFLNK` : `1 010 000 000 000 000`
+* Portanto, é preciso realizar os dois passos: aplicar a máscara e conferir a igualdade à constante.
+```c 
+    if ( dado & S_IFMT == S_IFLNK ) 
+       ...
+```
 
 ## Completando operações em diretórios
 
@@ -325,7 +377,7 @@ Agora que conhecemos o conceito de permissão, podemos completar as chamadas de 
 * `rmdir`
     * Parâmetro: nome 
     * O diretório deve estar vazio
-    
+
 ## Fora do assunto: o _shell_ e o comando `$?`
 
 * Execute qualquer comando no _shell_
