@@ -1,11 +1,11 @@
 # Encontro 03
 
 * Tema: erros em chamadas de sistema Unix e continuação de chamadas de sistema para arquivos
-* [Vídeo](https://www.youtube.com/playlist?list=PLGw6FOJ2oNsFsiKSK9qAnYl_kycXYEHmk)
+* [Vídeo](https://youtu.be/PglNKQRUZL8)
 
 ## Erros 
 * Erros nas chamadas de sistema
-    * Variável `errno` (`#include <sys/errno.h`)
+    * Variável `errno` (`#include <sys/errno.h>`)
     * `man 2 errno`
     * Explorar erros em manuais (`man`) de chamadas
     * Forçar erros em programas
@@ -21,8 +21,8 @@
             * [Seção 2.8 "_Closing a descriptor_"](https://ocaml.github.io/ocamlunix/files.html#sec32)
     * Chamadas de sistema `read` e `write`
         * "Ler arquivo" e "Escrever em arquivo"
-            * [Seção 2.7 "_Reading and writing_"](https://ocaml.github.io/ocamlunix/files.html )
+            * [Seção 2.7 "_Reading and writing_"](https://ocaml.github.io/ocamlunix/files.html#sec28)
     * Chamada de sistema `lseek`
         * "Posicionar"
-            * [Seção 2.12  "_Positioning_"](https://ocaml.github.io/ocamlunix/files.html)
+            * [Seção 2.12  "_Positioning_"](https://ocaml.github.io/ocamlunix/files.html#sec40)
             * Entender os 3 modos
