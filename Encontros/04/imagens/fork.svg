@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="148mm"
+   height="73.5mm"
+   viewBox="0 0 148 73.5"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="fork.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1590"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1515"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#cb3725;stroke-opacity:1;fill:#cb3725;fill-opacity:1"
+         id="path978" />
+    </marker>
+    <inkscape:path-effect
+       only_selected="false"
+       apply_with_weight="true"
+       apply_no_weight="true"
+       helper_size="0"
+       steps="2"
+       weight="33.333333"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect955"
+       effect="bspline" />
+    <rect
+       id="rect935"
+       height="16.441964"
+       width="30.616071"
+       y="19.276786"
+       x="3.5907738" />
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path978-0"
+         style="fill:#cb3725;fill-opacity:1;fill-rule:evenodd;stroke:#cb3725;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-6"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path978-04"
+         style="fill:#cb3725;fill-opacity:1;fill-rule:evenodd;stroke:#cb3725;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="261.07142"
+     inkscape:cy="150"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1306"
+     inkscape:window-height="723"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Lanfig</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:language>pt-BR</dc:language>
+        <cc:license
+           rdf:resource="https://unlicense.org" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       ry="9.921875"
+       rx="34.206848"
+       cy="18.842094"
+       cx="36.814877"
+       id="path917"
+       style="fill:#e3dbdb;stroke:none;stroke-width:1.13771" />
+    <text
+       id="text921"
+       y="7.9752965"
+       x="21.393454"
+       style="font-size:7.05556px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="7.9752965"
+         x="21.393454"
+         id="tspan919"
+         sodipodi:role="line">processo</tspan></text>
+    <text
+       id="text925"
+       y="15.610414"
+       x="37.986607"
+       style="font-size:4.23333px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:4.23333px;stroke-width:0.264583"
+         y="15.610414"
+         x="37.986607"
+         id="tspan923"
+         sodipodi:role="line">main(){</tspan><tspan
+         id="tspan927"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         y="20.902077"
+         x="37.986607"
+         sodipodi:role="line">  m=fork();</tspan><tspan
+         id="tspan929"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         y="26.193739"
+         x="37.986607"
+         sodipodi:role="line">  print(m);</tspan><tspan
+         id="tspan931"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         y="31.485401"
+         x="37.986607"
+         sodipodi:role="line">}</tspan></text>
+    <text
+       style="line-height:1.25;font-family:Courier;font-size:4.93888889000000031px;-inkscape-font-specification:Courier;white-space:pre;shape-inside:url(#rect935);"
+       id="text933"
+       xml:space="preserve" />
+    <text
+       id="text941"
+       y="15.799401"
+       x="10.205356"
+       style="font-size:4.93889px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan943"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+         y="15.799401"
+         x="10.205356"
+         sodipodi:role="line">m=?</tspan><tspan
+         id="tspan947"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         y="22.080921"
+         x="10.205356"
+         sodipodi:role="line">pilha</tspan><tspan
+         id="tspan949"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         y="28.362438"
+         x="10.205356"
+         sodipodi:role="line">ambiente</tspan><tspan
+         id="tspan951"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         y="34.643955"
+         x="10.205356"
+         sodipodi:role="line">descritores</tspan></text>
+    <path
+       inkscape:original-d="m 28.348215,14.665473 c 3.087069,2.65e-4 6.173875,2.65e-4 9.260416,0"
+       inkscape:path-effect="#path-effect955"
+       id="path953"
+       d="m 28.348215,14.665473 c 3.087069,0 6.173875,0 9.260416,0"
+       style="fill:none;stroke:#cb3725;stroke-width:0.318029;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <ellipse
+       style="fill:#e3dbdb;stroke:none;stroke-width:1.13771"
+       id="path917-6"
+       cx="110.48248"
+       cy="17.9328"
+       rx="34.206848"
+       ry="9.921875" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+       x="95.06105"
+       y="7.0660172"
+       id="text921-4"><tspan
+         sodipodi:role="line"
+         id="tspan919-7"
+         x="95.06105"
+         y="7.0660172"
+         style="stroke-width:0.264583">processo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       x="111.65419"
+       y="14.701121"
+       id="text925-8"><tspan
+         sodipodi:role="line"
+         id="tspan923-4"
+         x="111.65419"
+         y="14.701121"
+         style="font-size:4.23333px;stroke-width:0.264583">main(){</tspan><tspan
+         sodipodi:role="line"
+         x="111.65419"
+         y="19.992785"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan927-0">  m=fork();</tspan><tspan
+         sodipodi:role="line"
+         x="111.65419"
+         y="25.284447"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan929-0">  print(m);</tspan><tspan
+         sodipodi:role="line"
+         x="111.65419"
+         y="30.576109"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan931-6">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       x="83.872955"
+       y="14.89011"
+       id="text941-2"><tspan
+         sodipodi:role="line"
+         x="83.872955"
+         y="14.89011"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+         id="tspan943-4">m=<tspan
+   id="tspan1628"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier;-inkscape-font-specification:'Courier Bold'">10703</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="83.872955"
+         y="21.171642"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan947-7">pilha</tspan><tspan
+         sodipodi:role="line"
+         x="83.872955"
+         y="27.453173"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan949-4">ambiente</tspan><tspan
+         sodipodi:role="line"
+         x="83.872955"
+         y="33.734703"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan951-1">descritores</tspan></text>
+    <path
+       style="fill:none;stroke:#cb3725;stroke-width:0.318029;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-5)"
+       d="m 106.24917,19.047857 c 3.08709,0 6.17391,0 9.26047,0"
+       id="path953-8"
+       inkscape:path-effect="#path-effect1515"
+       inkscape:original-d="m 106.24917,19.047857 c 3.08709,2.65e-4 6.17391,2.65e-4 9.26047,0" />
+    <ellipse
+       style="fill:#ffe6d5;stroke:none;stroke-width:1.13771"
+       id="path917-0"
+       cx="111.54082"
+       cy="53.387001"
+       rx="34.206848"
+       ry="9.921875" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+       x="90.298546"
+       y="43.04937"
+       id="text921-5"><tspan
+         sodipodi:role="line"
+         id="tspan919-6"
+         x="90.298546"
+         y="43.04937"
+         style="stroke-width:0.264583">processo filho</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       x="112.71252"
+       y="50.155319"
+       id="text925-85"><tspan
+         sodipodi:role="line"
+         id="tspan923-3"
+         x="112.71252"
+         y="50.155319"
+         style="font-size:4.23333px;stroke-width:0.264583">main(){</tspan><tspan
+         sodipodi:role="line"
+         x="112.71252"
+         y="55.446983"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan927-7">  m=fork();</tspan><tspan
+         sodipodi:role="line"
+         x="112.71252"
+         y="60.738644"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan929-6">  print(m);</tspan><tspan
+         sodipodi:role="line"
+         x="112.71252"
+         y="66.030304"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         id="tspan931-8">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+       x="84.93129"
+       y="50.344307"
+       id="text941-6"><tspan
+         sodipodi:role="line"
+         x="84.93129"
+         y="50.344307"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Courier;-inkscape-font-specification:Courier;stroke-width:0.264583"
+         id="tspan943-7">m=<tspan
+   id="tspan1630"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier;-inkscape-font-specification:'Courier Bold'">0</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="84.93129"
+         y="56.625839"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan947-1">pilha</tspan><tspan
+         sodipodi:role="line"
+         x="84.93129"
+         y="62.907368"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan949-8">ambiente</tspan><tspan
+         sodipodi:role="line"
+         x="84.93129"
+         y="69.188896"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583"
+         id="tspan951-4">descritores</tspan></text>
+    <path
+       style="fill:none;stroke:#cb3725;stroke-width:0.318029;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-6)"
+       d="m 105.72,54.502046 c 3.08709,0 6.17391,0 9.26047,0"
+       id="path953-9"
+       inkscape:path-effect="#path-effect1590"
+       inkscape:original-d="m 105.72,54.502046 c 3.08709,2.65e-4 6.17391,2.65e-4 9.26047,0" />
+  </g>
+</svg>
