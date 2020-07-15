@@ -2,7 +2,7 @@
 
 ![](imagens/intro.svg)
 
-Vídeo: 
+Vídeo: https://youtu.be/rn2c7oA293s
 
 ## Mistério
 Observe o seguinte programa:
