@@ -99,6 +99,7 @@ int main(int argc, char** argv) {
 
 ![](imagens/intro2.svg)
 
+* Vídeo: https://youtu.be/UQQabdu-4ZM
 * Sincronização entre processo-pai e processo-filho
 * Mecanismo rudimentar de comunicação interprocessos
     * `exit`
